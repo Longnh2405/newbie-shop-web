@@ -1,0 +1,35 @@
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
+@import './_var';
+@import './_mixins';
+@import './_ie-fix';
+@import './_custom';
+
+@import './pages/header.scss';
+@import './components/footer.scss';
+@import './components/header.scss';
+@import './components/policy-card.scss';
+
+@import './components/hero-slider.scss';
+@import './components/button.scss';
+@import './components/section.scss';
+@import './components/product-card.scss';
+@import './components/catalog.scss';
+@import './components/customCheckbox.scss';
+@import './components/product-view.scss';
+@import './components/productviewmodel.scss';
+@import './components/cart.scss';
+@import './components/user.scss';
+@import './components/support.scss';
+@import './components/purchase.scss';
+@import './components/coin.scss';
+@import './components/profile.scss';
+@import './components/notification.scss';
+@import './components/empty-productslide.scss';
+@import './components/voucher.scss';
+@import './components/login.scss';
+@import './components/forminput.scss';
+@import './components/stepcard.scss';
+@import './components/qrpayment.scss';
+@import '../components/CartItem/CartItem.scss';

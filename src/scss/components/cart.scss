@@ -1,0 +1,65 @@
+.cart {
+  padding-top: 30px;
+  @include flex(flex-start, flex-start);
+
+  @include tablet {
+    flex-wrap: wrap-reverse;
+  }
+
+  @include mobile {
+    flex-wrap: wrap-reverse;
+  }
+
+  &__info {
+    width: 40%;
+    margin-right: 30px;
+    padding: 20px;
+    box-shadow: $box-shadow;
+    position: sticky;
+    top: calc(#{$header-shrink-height} + 20px);
+    background-color: #fff;
+
+    @include tablet {
+      width: 100%;
+      margin-right: unset;
+    }
+
+    &__txt {
+      & > * {
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+      &__price {
+        @include flex(center, space-between);
+        padding: 10px 0;
+        font-size: 1.1rem;
+        span:nth-child(2) {
+          font-size: 1.25rem;
+          color: $main-color;
+          font-weight: 600;
+        }
+      }
+    }
+    &__btn {
+      @include flex(flex, space-between);
+
+      margin-bottom: 20px;
+      .btn-pay {
+        margin-left: 30px;
+      }
+
+      a:hover {
+        color: white;
+      }
+    }
+  }
+
+  &__list {
+    flex-grow: 1;
+    box-shadow: $box-shadow;
+    padding: 0 20px 0;
+    background-color: #fff;
+  }
+}

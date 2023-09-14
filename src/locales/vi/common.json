@@ -1,0 +1,18 @@
+{
+  "hello": "Xin chào",
+  "login": "Đăng nhập",
+  "forget_password": "Quên mật khẩu",
+  "remember_login": "Nhớ đăng nhập",
+  "username": "Tên đăng nhập",
+  "password": "Mật khẩu",
+  "rePassword": "Đặt lại mật khẩu",
+  "sort_by": "Sắp xếp theo",
+  "is_required_field": "{{key}} là trường bắt buộc!",
+  "search": "Tìm kiếm",
+  "cancel": "Hủy",
+  "logout": "Đăng xuất",
+  "close": "Đóng",
+  "save": "Lưu",
+  "add": "Thêm",
+  "add_key": "Thêm {{key}}"
+}

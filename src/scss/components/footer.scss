@@ -1,0 +1,43 @@
+.footer {
+  padding: 70px 0;
+  font-size: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.09);
+  background-color: #fbfbfb;
+  &__logo {
+    height: 40px;
+  }
+  &__about {
+    p {
+      margin-bottom: 2rem;
+    }
+    img {
+      height: 80px;
+    }
+  }
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+  &__content {
+    p {
+      //   margin-bottom: 1.25rem;
+      margin: 8px 0;
+    }
+
+    .about-us {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      i {
+        font-size: 1.25rem;
+      }
+
+      p {
+        @include flex(center, flex-start);
+        padding-left: 5px;
+      }
+    }
+  }
+}

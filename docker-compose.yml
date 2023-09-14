@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  newbie-shop-web:
+    image: newbie-shop-web
+    ports:
+      # - '3030:80'
+      - '5001:5001'
+# 3030: port máy
+# 80: port container

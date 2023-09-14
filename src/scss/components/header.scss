@@ -1,0 +1,141 @@
+.header {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $header-height;
+  transition: height 0.2s ease;
+  z-index: 99;
+
+  @include tablet {
+    height: $header-tablet-height;
+    box-shadow: $box-shadow;
+  }
+  @include mobile {
+    box-shadow: $box-shadow;
+    height: $header-mobile-height;
+  }
+
+  .container {
+    height: 100%;
+  }
+
+  &.shrink {
+    height: $header-shrink-height;
+    box-shadow: $box-shadow;
+    z-index: 100;
+    @include mobile {
+      height: 50px;
+    }
+  }
+
+  &__logo {
+    @include flex(center, center);
+    position: absolute;
+    inset: 0;
+    width: 40%;
+    left: 30%;
+    img {
+      height: 70px;
+      @include mobile {
+        height: 40px;
+      }
+    }
+  }
+  &__menu {
+    @include flex(center, space-between);
+    height: 100%;
+
+    font-size: 1rem;
+    &__mobile-toggle {
+      display: none;
+    }
+
+    &__item.active {
+      font-weight: 600;
+      color: $main-color;
+    }
+    &__item :hover {
+      color: $main-color;
+    }
+
+    &__left {
+      @include flex(center, center);
+      height: 100%;
+      &__item {
+        margin-right: 39px;
+
+        @include tablet {
+          margin-right: 20px;
+        }
+        @include mobile {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    &__right {
+      @include flex(center, flex-end);
+      width: max-content;
+      justify-content: flex-end;
+      font-size: 1.75rem;
+
+      &__item {
+        position: relative;
+        @include flex(center, center);
+        margin-left: 39px;
+
+        @include tablet {
+          margin-right: 20px;
+          margin-left: 0;
+        }
+        @include mobile {
+          margin-left: 0;
+          margin-right: 10px;
+        }
+
+        .icon {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      @include mobile {
+        font-size: 1.5rem;
+      }
+    }
+
+    &__left {
+      @include tablet {
+        display: none;
+        &__item {
+          margin: 0;
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.08);
+          }
+        }
+      }
+      @include mobile {
+      }
+    }
+    &__mobile-toggle {
+      display: none;
+      cursor: pointer;
+
+      @include tablet {
+        display: block;
+        font-size: 2.25rem;
+      }
+    }
+  }
+}
+.swipeable-logo {
+  width: 170px;
+  padding: 10px 0 10px 0;
+  margin-left: 10px;
+  border-bottom: 0.0625rem solid #efefef;
+  img {
+    width: 80%;
+  }
+}

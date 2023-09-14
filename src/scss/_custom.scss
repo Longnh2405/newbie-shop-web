@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  @include mobile {
+    font-size: 11px;
+  }
+  .slick-next:before,
+  .slick-prev:before {
+    content: '';
+  }
+  .slick-next,
+  .slick-prev {
+    z-index: 99;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Mulish', sans-serif !important;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  width: 100%;
+}
+.container {
+  width: 100%;
+  max-width: 1620px;
+  padding: 0 50px;
+  margin: auto;
+
+  @include tablet {
+    padding: 0 20px;
+  }
+
+  @include mobile {
+    padding: 0 10px;
+  }
+}
+
+.simplebar-vertical {
+  opacity: 50%;
+}
+
+.m-t-30 {
+  margin-top: 30px;
+}
+.m-l-15 {
+  margin-left: 15px;
+}
+
+.m-r-15 {
+  margin-right: 15px;
+}
+
+.m-r-35 {
+  margin-right: 35px;
+}
+
+.m-t-15 {
+  margin-top: 15px !important;
+}
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+a:hover {
+  color: $main-color;
+}
+.grid {
+  display: grid;
+}
+@each $color, $val in $colors {
+  .color-#{$color} {
+    color: $val;
+  }
+
+  .bg-#{$color} {
+    background-color: $val;
+  }
+}
+
+@each $val in $numbers {
+  .grid-col-#{$val} {
+    grid-template-columns: repeat($val, 1fr);
+  }
+}
+
+@each $val in $numbers {
+  .grid-col-md-#{$val} {
+    @include tablet {
+      grid-template-columns: repeat($val, 1fr);
+    }
+  }
+}
+
+@each $val in $numbers {
+  .grid-col-sm-#{$val} {
+    @include mobile {
+      grid-template-columns: repeat($val, 1fr);
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+}
